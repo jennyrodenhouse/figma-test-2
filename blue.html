@@ -35,14 +35,34 @@
             cursor: pointer;
         }
 
-        area:hover {
-            opacity: 0.8;
+        .hover-overlay {
+            position: absolute;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hover-overlay:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .red-square {
+            width: 90px;
+            height: 90px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="blue.png" usemap="#navigation-map" alt="Blue">
+
+        <!-- Red square hover overlays -->
+        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 236px;"></a>
+        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 236px;"></a>
+        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 416px;"></a>
+        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 416px;"></a>
+        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 596px;"></a>
+        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 596px;"></a>
+
         <map name="navigation-map">
             <!-- Red squares -->
             <area shape="rect" coords="424,236,514,326" href="red.html" alt="Go to Red">
