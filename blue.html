@@ -19,62 +19,47 @@
             background: #1a1a1a;
         }
 
-        .container {
+        .canvas {
             position: relative;
-            display: inline-block;
+            width: 1300px;
+            height: 920px;
+            background: #0000FF;
         }
 
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            cursor: pointer;
-        }
-
-        area {
-            cursor: pointer;
-        }
-
-        .hover-overlay {
+        .square {
             position: absolute;
-            transition: background-color 0.3s ease;
+            width: 90px;
+            height: 90px;
             cursor: pointer;
-        }
-
-        .hover-overlay:hover {
-            background-color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
         .red-square {
-            width: 90px;
-            height: 90px;
+            background: #FF0000;
+        }
+
+        .red-square:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .green-square {
+            background: #00FF00;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="blue.png" usemap="#navigation-map" alt="Blue">
+    <div class="canvas">
+        <!-- Red squares -->
+        <a href="red.html" class="square red-square" style="left: 424px; top: 236px;"></a>
+        <a href="red.html" class="square red-square" style="left: 786px; top: 236px;"></a>
+        <a href="red.html" class="square red-square" style="left: 424px; top: 416px;"></a>
+        <a href="red.html" class="square red-square" style="left: 786px; top: 416px;"></a>
+        <a href="red.html" class="square red-square" style="left: 424px; top: 596px;"></a>
+        <a href="red.html" class="square red-square" style="left: 786px; top: 596px;"></a>
 
-        <!-- Red square hover overlays -->
-        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 236px;"></a>
-        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 236px;"></a>
-        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 416px;"></a>
-        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 416px;"></a>
-        <a href="red.html" class="hover-overlay red-square" style="left: 424px; top: 596px;"></a>
-        <a href="red.html" class="hover-overlay red-square" style="left: 786px; top: 596px;"></a>
-
-        <map name="navigation-map">
-            <!-- Red squares -->
-            <area shape="rect" coords="424,236,514,326" href="red.html" alt="Go to Red">
-            <area shape="rect" coords="786,236,876,326" href="red.html" alt="Go to Red">
-            <area shape="rect" coords="424,416,514,506" href="red.html" alt="Go to Red">
-            <area shape="rect" coords="786,416,876,506" href="red.html" alt="Go to Red">
-            <area shape="rect" coords="424,596,514,686" href="red.html" alt="Go to Red">
-            <area shape="rect" coords="786,596,876,686" href="red.html" alt="Go to Red">
-
-            <!-- Green square (center) -->
-            <area shape="rect" coords="604,416,696,506" href="green.html" alt="Go to Green">
-        </map>
+        <!-- Green square (center) -->
+        <a href="green.html" class="square green-square" style="left: 604px; top: 416px;"></a>
     </div>
 </body>
 </html>

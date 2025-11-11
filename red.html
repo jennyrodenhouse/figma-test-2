@@ -19,40 +19,41 @@
             background: #1a1a1a;
         }
 
-        .container {
+        .canvas {
             position: relative;
-            display: inline-block;
+            width: 1300px;
+            height: 920px;
+            background: #FF0000;
         }
 
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
+        .square {
+            position: absolute;
+            width: 90px;
+            height: 90px;
             cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
-        area {
-            cursor: pointer;
+        .blue-square {
+            background: #0000FF;
         }
 
-        area:hover {
-            opacity: 0.8;
+        .green-square {
+            background: #00FF00;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="red.png" usemap="#navigation-map" alt="Red">
-        <map name="navigation-map">
-            <!-- Blue squares -->
-            <area shape="rect" coords="514,326,604,416" href="blue.html" alt="Go to Blue">
-            <area shape="rect" coords="696,326,786,416" href="blue.html" alt="Go to Blue">
-            <area shape="rect" coords="514,506,604,596" href="blue.html" alt="Go to Blue">
-            <area shape="rect" coords="696,506,786,596" href="blue.html" alt="Go to Blue">
+    <div class="canvas">
+        <!-- Blue squares -->
+        <a href="blue.html" class="square blue-square" style="left: 514px; top: 326px;"></a>
+        <a href="blue.html" class="square blue-square" style="left: 696px; top: 326px;"></a>
+        <a href="blue.html" class="square blue-square" style="left: 514px; top: 506px;"></a>
+        <a href="blue.html" class="square blue-square" style="left: 696px; top: 506px;"></a>
 
-            <!-- Green square (center) -->
-            <area shape="rect" coords="604,416,696,506" href="green.html" alt="Go to Green">
-        </map>
+        <!-- Green square (center) -->
+        <a href="green.html" class="square green-square" style="left: 604px; top: 416px;"></a>
     </div>
 </body>
 </html>
